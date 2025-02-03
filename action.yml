@@ -1,5 +1,5 @@
 name: PyInstaller Action
-author: '@Martin005'
+author: '@skywalkerctu'
 description: GitHub Action to package python scripts into executables
 branding: 
   icon: hard-drive
@@ -110,7 +110,7 @@ runs:
     
     - name: (Upload) generated spec file - if .py
       if: endsWith(inputs.spec, '.py')
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4.6.0
       with:
         name: Generated spec file
         path: ${{ steps.mods.outputs.spec_name }}.spec
