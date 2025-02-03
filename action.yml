@@ -103,7 +103,7 @@ runs:
     - name: (Upload) Executable
       id: artifact_upload
       if: inputs.upload_exe_with_name != ''
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4.6.0
       with:
         name: ${{ inputs.upload_exe_with_name }}
         path: ${{ inputs.exe_path }}
